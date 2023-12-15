@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hasil Prediksi Gaji</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1D2536;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            color: #343a40;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        p {
+            font-family: 'Roboto', sans-serif;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .predict-title {
+            color: block;
+        }
+
+        /* Styling for the prediction result */
+        .prediction-container {
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        /* Styling for runtime information */
+        .runtime-info {
+            margin-top: 20px;
+            font-size: 0.8em;
+            font-color: block;
+            color: block;
+        }
+
+        .hasil-prediksi-title {
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            margin-top: -200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="hasil-prediksi-title">HASIL PREDIKSI</h2>
+    <div class="prediction-container">
+
+        <p>Hasil prediksi untuk gaji yang dimasukkan:</p>
+        <p><strong class="predict-title">Prediksi:</strong> {{ prediction }}</p>
+        <p class="runtime-info"><strong>Runtime:</strong> {{ runtime }}</p>
+    </div>
+</body>
+</html>

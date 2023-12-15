@@ -1,0 +1,5 @@
+Flask==3.0.0
+Werkzeug==3.0.1
+datetime==4.3.0
+Numpy==1.23.5
+Pandas==1.5.3

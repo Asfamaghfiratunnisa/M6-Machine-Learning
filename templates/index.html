@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Income Predict</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #1D2536;
+        margin: 20px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin-top: 150px;
+      }
+
+      h2 {
+        color: #654E92;
+      }
+
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #555;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="#555" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z" /></svg>');
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 10px;
+        background-size: 24px;
+      }
+
+      input[type="submit"] {
+        background-color: #40598F;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #384E7E;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style= "text-align: center; color: white; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 35px">INPUT DATA</h1>
+    <form action="/predict" method="post">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" required><br>
+
+      <label for="education">Education:</label>
+      <select id="education" name="education" required>
+        <option value="11">HS-grad</option>
+            <option value="15">Some-college</option>
+            <option value="9">Bachelors</option>
+            <option value="12">Masters</option>
+            <option value="8">Assoc-voc</option>
+            <option value="1">11th</option>
+            <option value="7">Assoc-acdm</option>
+            <option value="0">10th</option>
+            <option value="5">7th-8th</option>
+            <option value="14">Prof-school</option>
+            <option value="6">9th</option>
+            <option value="2">12th</option>
+            <option value="10">Doctorate</option>
+            <option value="4">5th-6th</option>
+            <option value="3">1st-4th</option>
+            <option value="13">Preschool</option>
+      </select><br>
+
+      <label for="occupation">Occupation:</label>
+      <select id="occupation" name="occupation" required>
+        <option value="2">Craft-repair</option>
+            <option value="3">Exec-managerial</option>
+            <option value="9">Prof-specialty</option>
+            <option value="0">Adm-clerical</option>
+            <option value="11">Sales</option>
+            <option value="7">Other-service</option>
+            <option value="6">Machine-op-inspc</option>
+            <option value="13">Transport-moving</option>
+            <option value="5">Handlers-cleaners</option>
+            <option value="4">Farming-fishing</option>
+            <option value="12">Tech-support</option>
+            <option value="10">Protective-serv</option>
+            <option value="8">Priv-house-serv</option>
+            <option value="1">Armed-Forces</option>
+      </select><br>
+
+      <label for="hours-per-week">Hours per Week:</label>
+      <input type="text" id="hours-per-week" name="hours_per_week" required><br>
+
+      <label for="native-country">Native Country:</label>
+      <select id="native-country" name="native_country" required>
+        <option value="38">United States</option>
+          <option value="25">Mexico</option>
+          <option value="29">Philippines</option>
+          <option value="10">Germany</option>
+          <option value="32">Puerto-Rico</option>
+          <option value="1">Canada</option>
+          <option value="7">El-Salvador</option>
+          <option value="18">India</option>
+          <option value="4">Cuba</option>
+          <option value="2">China</option>
+          <option value="8">England</option>
+          <option value="22">Jamaica</option>
+          <option value="34">South</option>
+          <option value="5">Dominican-Republic</option>
+          <option value="21">Italy</option>
+          <option value="23">Japan</option>
+          <option value="39">Vietnam</option>
+          <option value="12">Guatemala</option>
+          <option value="3">Columbia</option>
+          <option value="30">Poland</option>
+          <option value="13">Haiti</option>
+          <option value="31">Portugal</option>
+          <option value="19">Iran</option>
+          <option value="35">Taiwan</option>
+          <option value="26">Nicaragua</option>
+          <option value="11">Greece</option>
+          <option value="6">Ecuador</option>
+          <option value="28">Peru</option>
+          <option value="20">Ireland</option>
+          <option value="9">France</option>
+          <option value="36">Thailand</option>
+          <option value="16">Hong</option>
+          <option value="0">Cambodia</option>
+          <option value="37">Trinadad&Tobago</option>
+          <option value="40">Yugoslavia</option>
+          <option value="15">Honduras</option>
+          <option value="33">Scotland</option>
+          <option value="27">Outlying-US(Guam-USVI-etc)</option>
+          <option value="24">Laos</option>
+          <option value="17">Hungary</option>
+          <option value="14">Holand-Netherlands</option>
+      </select><br>
+
+      <br /><br />
+      <input type="submit" value="Predict"/>
+    </form>
+  </body>
+</html>
