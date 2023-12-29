@@ -15,7 +15,7 @@ Berikut atribut-atribut yang harus diinput ke dalam web predict:
 
 Gambar di atas adalah tampilan untuk input data yang ingin diprediksi pendapatannya
 
-![image](asset/predict.jpeg)
+![image](asset/predicttt.jpeg)
 ![image](asset/predict1.jpeg)
 
 Gambar di atas adalah hasil prediksi pendapatan 
